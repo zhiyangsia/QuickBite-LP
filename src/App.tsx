@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-import LogoImg from './assets/images/QuickBite.png';
+import LogoImg from './assets/images/regenerated_image_1778820992688.jpg';
 import HeroImg from './assets/images/regenerated_image_1778682076766.png';
 import TestimonialImg1 from './assets/images/regenerated_image_1778683436041.png';
 import TestimonialImg2 from './assets/images/regenerated_image_1778683436809.png';
@@ -298,7 +298,7 @@ export default function App() {
       {/* 5. PROOF / TESTIMONIALS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center uppercase tracking-widest text-secondary font-bold text-sm mb-16 opacity-60">
-          Validated by MMU Students & Vendors
+          Validated by the MMU Community
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
           {[
@@ -350,9 +350,9 @@ export default function App() {
           >
             <Smartphone size={40} className="text-white" />
           </motion.div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-8">Built by Students, For Students</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-8">Built by Students, For the MMU Community</h2>
           <p className="text-white/80 text-xl leading-relaxed max-w-3xl">
-            We are MMU students who got tired of skipping lunch. QuickBite was born to offer a stress-free dining experience for students and a systematic order management tool for our hardworking campus vendors.
+            We are MMU students who got tired of skipping lunch. QuickBite was born to offer a stress-free dining experience for the MMU Community and a systematic order management tool for our hardworking campus vendors.
           </p>
         </div>
       </section>
