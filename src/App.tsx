@@ -17,7 +17,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 
 import LogoImg from './assets/images/regenerated_image_1778820992688.jpg';
-import HeroImg from './assets/images/regenerated_image_1778682076766.png';
+import HeroImg from './assets/images/regenerated_image_1781268365381.jpg';
 import TestimonialImg1 from './assets/images/regenerated_image_1778683436041.png';
 import TestimonialImg2 from './assets/images/regenerated_image_1778683436809.png';
 import DemoMockupImg from './assets/images/regenerated_image_1778766052214.png';
@@ -186,7 +186,7 @@ export default function App() {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Wasting Your Break in Long Lines?</h2>
@@ -203,10 +203,10 @@ export default function App() {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.12 }}
                 className="p-10 border border-secondary bg-white rounded-xl shadow-editorial group hover:bg-secondary transition-all duration-300"
               >
                 <div className="text-primary group-hover:text-white mb-6 transition-colors inline-block">{item.icon}</div>
@@ -221,9 +221,15 @@ export default function App() {
       {/* 3. SOLUTION / SERVICES */}
       <section id="services" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Your Fast Track to Food</h2>
-          </div>
+          </motion.div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -234,9 +240,10 @@ export default function App() {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.12 }}
                 className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
@@ -253,7 +260,13 @@ export default function App() {
       {/* 4. PROOF / PORTFOLIO (MVP Demo Section) */}
       <section id="demo" className="py-24 bg-neutral-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-12"
+          >
             <h2 className="text-4xl lg:text-5xl font-bold mb-10">See QuickBite in Action</h2>
             <div className="inline-flex bg-white/50 p-1.5 rounded-full border border-gray-200">
               <button 
@@ -269,9 +282,15 @@ export default function App() {
                 Vendor Dashboard
               </button>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative mt-16 max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="relative mt-16 max-w-4xl mx-auto"
+          >
              <AnimatePresence mode="wait">
                <motion.div
                  key={demoMode}
@@ -291,35 +310,42 @@ export default function App() {
                  </div>
                </motion.div>
              </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 5. PROOF / TESTIMONIALS */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center uppercase tracking-widest text-secondary font-bold text-sm mb-16 opacity-60">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center uppercase tracking-widest text-secondary font-bold text-sm mb-16 opacity-60"
+        >
           Validated by the MMU Community
-        </div>
+        </motion.div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
           {[
             { 
               quote: "Skipping the 40-minute queue gives me time to actually rest between classes.", 
-              author: "Anonymous Student", 
+              author: "Lim Kwok Hsiung", 
               role: "MMU Student",
               img: TestimonialImg1
             },
             { 
               quote: "Receiving pre-orders systematically helps us prepare meals ahead of time and completely eliminates the lunchtime chaos.", 
-              author: "Anonymous Vendor", 
+              author: "Firdaus", 
               role: "Campus Food Vendor",
               img: TestimonialImg2
             }
           ].map((testi, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.15 }}
               className="bg-white p-12 rounded-xl shadow-editorial border border-gray-100 relative"
             >
               <span className="text-8xl text-primary/10 absolute top-4 left-6 leading-none select-none">"</span>
@@ -341,27 +367,42 @@ export default function App() {
       {/* 6. ABOUT US */}
       <section className="py-24 bg-secondary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top-right"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="mb-10 w-20 h-20 bg-primary rounded-2xl flex items-center justify-center"
-          >
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center"
+        >
+          <div className="mb-10 w-20 h-20 bg-primary rounded-2xl flex items-center justify-center">
             <Smartphone size={40} className="text-white" />
-          </motion.div>
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-8">Built by Students, For the MMU Community</h2>
           <p className="text-white/80 text-xl leading-relaxed max-w-3xl">
             We are MMU students who got tired of skipping lunch. QuickBite was born to offer a stress-free dining experience for the MMU Community and a systematic order management tool for our hardworking campus vendors.
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* 7. FAQ */}
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl lg:text-5xl font-bold mb-16 text-center"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="space-y-4"
+          >
             <FAQItem 
               question="How do vendors receive my order?" 
               answer="Through our dedicated, easy-to-use vendor dashboard that systematically lists all pre-scheduled pickups. They can see what's coming next and prepare dishes just-in-time."
@@ -374,7 +415,7 @@ export default function App() {
               question="Is it MMU Cyberjaya or Melaka?" 
               answer="QuickBite is currently serving the MMU Melaka campus! We are expanding to other locations soon, so sign up for the waitlist to be notified when we launch elsewhere."
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -411,7 +452,7 @@ export default function App() {
             <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary transition-colors">Contact Us</a>
+              <a href="mailto:quickbite05@gmail.com" className="hover:text-primary transition-colors">Contact Us</a>
             </div>
           </div>
         </div>
